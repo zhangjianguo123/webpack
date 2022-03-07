@@ -1,2 +1,5 @@
-let a = require("./index")
-console.log('我是入口文件', a)
+let a = require("./init")
+import "./style/init.css"
+import "./style/scss/sass.scss"
+import "./style/less/less.less"
+console.log('56', a)
