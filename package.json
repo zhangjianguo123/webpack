@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/zhangjianguo123/webpack#readme",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/runtime": "^7.17.7",
     "csv-loader": "^3.0.3",
     "html-webpack-plugin": "^5.5.0",
     "json5": "^2.2.0",
@@ -32,6 +34,9 @@
     "yaml": "^1.10.2"
   },
   "dependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "style-loader": "^3.3.1"
   }

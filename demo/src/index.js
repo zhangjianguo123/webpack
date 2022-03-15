@@ -1,5 +1,6 @@
-import { fn } from './utils'
-fn()
+import obj from './utils'
+console.log("obj", obj)
+obj()
 import imgsrc from './1.png'
 import './style/base.css'
 import './style/less.less'

@@ -14,8 +14,9 @@ module.exports = {
         clean: true, // 清理打包文件  
         assetModuleFilename: "images/[contenthash][ext]", // 定义打包过后的照片路径以及动态名称和原有后缀
     },
+    //production
     // development
-    mode: "production",
+    mode: "development",
     devtool: "inline-source-map", // 精准报错信息与错误文件下，不在是编译后的报错文件以及行数
     plugins: [
         new HtmlWebpackPlugin({
@@ -72,6 +73,19 @@ module.exports = {
                 type: 'json',
                 parser: {
                     parse: json5.parse
+                }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["@babel/preset-env"],
+                        plugins: [
+                            ["@babel/plugin-transform-runtime"]
+                        ]
+                    }
                 }
             }
         ]
